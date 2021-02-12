@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Dashboard</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="text-center m-auto">
+            <h1 class="mt-3">Dashboard</h1>
+            <button onclick="location.href = 'create_annonce'" type="button" class="btn btn-lg btn-info my-5">Créer une annonce</button></br>
+            <button onclick="location.href = 'list_annonce'" type="button" class="btn btn-lg btn-info my-5">List annonce</button>
+        </div>      
+    </body>
+</html>

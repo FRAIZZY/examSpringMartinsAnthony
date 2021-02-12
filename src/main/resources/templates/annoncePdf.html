@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Détail Annonce</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>        
+        <div style="text-align: center" th:each="annonce : ${annonce}">
+            <h1 th:utext="'Detail de l\'annonce numero ' + ${annonce.id}"></h1>
+            <h1 th:utext="'Titre : ' + ${annonce.title}"></h1>
+            <p th:utext="'Lien de l\'image : ' + ${annonce.image}"></p>
+            <p th:utext="'Contenu : ' + ${annonce.content}"></p>
+            <p th:utext="'Date de publication : ' + ${annonce.datePublication}"></p>          
+        </div>
+
+    </body>
+</html>

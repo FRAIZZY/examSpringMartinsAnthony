@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Détail Annonce</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <style>
+            img {
+                max-width: 300px;
+                max-height: 300px;
+            }
+        </style>
+        
+        <div th:each="annonce : ${annonce}" class="text-center m-auto">
+            <h1 th:utext="'Détail de l\'annonce n° ' + ${annonce.id}" class="my-3"></h1>
+            <h1 th:utext="'Titre : ' + ${annonce.title}"></h1>
+            <img th:src="${annonce.image}">
+            <p th:utext="'Contenu : ' + ${annonce.content}"></p>
+            <p th:utext="'Date de publication : ' + ${annonce.datePublication}"></p>
+            <a th:href="@{/pdf/{id}(id=${annonce.id})}">Télécharger en PDF</a>            
+        </div>
+
+    </body>
+</html>
